@@ -1,0 +1,50 @@
+<!--pages/collect/collect.wxml-->
+<view class="news-warp">
+    <view class="tab bg_f8e">
+        <view data-num="{{index}}" class="item {{hoverIndex === index + 1?'hover':''}}" bindtap="tabClick" wx:for="{{tab}}" wx:key="{{index}}">
+            {{item.title}}
+        </view>
+    </view>
+    <!-- 文章 -->
+    <view class="article content" wx:if="{{hoverIndex==1}}">
+      <view wx:if="{{articleList!=''}}">
+        <view class="bor_b flex con_item" wx:for='{{articleList}}' wx:key="{{itemName}}" wx:for-item="itemName" bindtap='toDetails' data-id="{{itemName.id}}" data-type="1">
+          <image src='{{itemName.image}}'></image>
+          <view class='con_body'>
+            <view class='sheng'>{{itemName.name}}</view>
+            <view class='flex_i content_icon c_999 f_32'>
+              <image src='../../images/see.png'></image><text class='mr_20'>{{itemName.read}}</text> 
+              <image src='../../images/love.png'></image><text class='mr_20'>{{itemName.like}}</text> 
+              <image src='../../images/ping.png'></image><text class='mr_20'>{{itemName.comment}}</text> 
+            </view>
+          </view>
+        </view>
+      </view>
+      <view wx:else class='flex_fa c_999 f_32'>
+        <image src='../../images/zanwu.png' class='zanwu mb_20'></image>
+        赶紧收藏喜欢的内容吧~
+      </view>
+    </view>
+
+    <!-- 视频 -->
+    <view class="video content" wx:if="{{hoverIndex==2}}">
+      <view wx:if="{{videoList!=''}}">
+        <view class="bor_b flex con_item" wx:for='{{videoList}}' wx:key="{{itemName}}" wx:for-item="itemName" bindtap='toDetails' data-id="{{itemName.id}}" data-type="2">
+          <image src='{{itemName.image}}'></image>
+          <view class='con_body'>
+            <view class='sheng'>{{itemName.name}}</view>
+            <view class='flex_i content_icon c_999 f_32'>
+              <image src='../../images/see.png'></image><text class='mr_20'>{{itemName.read}}</text> 
+              <image src='../../images/love.png'></image><text class='mr_20'>{{itemName.like}}</text> 
+              <image src='../../images/ping.png'></image><text class='mr_20'>{{itemName.comment}}</text> 
+            </view>
+          </view>
+        </view>
+      </view>
+      <view wx:else class='flex_fa c_999 f_32'>
+        <image src='../../images/zanwu.png' class='zanwu mb_20'></image>
+        赶紧收藏喜欢的内容吧~
+      </view>
+    </view>
+
+</view>

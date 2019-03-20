@@ -1,0 +1,15 @@
+/* pages/zan/zan.wxss */
+.item{
+  font-size: 34rpx;
+  padding: 30rpx;
+  justify-content: space-between;
+}
+image{
+  width: 90rpx;
+  height: 90rpx;
+  margin-right: 20rpx;
+  border-radius: 50%;
+}
+.time{
+  font-size: 28rpx;
+}

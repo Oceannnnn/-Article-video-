@@ -1,0 +1,60 @@
+/* pages/search/search.wxss */
+@import "../index/index.wxss";
+page{
+  background: #fff;
+}
+.i_search{
+  margin-left: 20rpx;
+  position: relative;
+}
+.i_search image{
+  position: absolute;
+  left: 10rpx;
+}
+.i_search input{
+  width: 100%;
+  margin-left: 50rpx;
+}
+.s_search{
+  width: 20%;
+  text-align: center;
+}
+.i_body{
+  padding: 20rpx;
+  color: #999;
+  font-size: 34rpx;
+}
+.s_item{
+  padding: 10rpx;
+  background: #eee;
+  margin: 20rpx 20rpx 0 0;
+  border-radius: 10rpx;
+}
+.re_tile{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 100;
+  top: 0;
+  justify-content: center;
+  color: #fff;
+  font-size: 38rpx;
+}
+.item{
+  height: 400rpx;
+}
+.model-img{
+  height: 100%;
+}
+.histroyImage{
+  width: 40rpx;
+  height: 40rpx;
+}
+.histroyBody{
+  width: 90%;
+}
+.movie_name{
+  width: 80%;
+  margin: 0 auto;
+}

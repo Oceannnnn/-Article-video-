@@ -1,0 +1,17 @@
+<!--pages/article/article.wxml-->
+<view class='bor_t'>
+  <view wx:for="{{articleList}}" wx:key="{{itemName}}" wx:for-item="itemName" class='articleItem bg_f mb_20' data-id="{{itemName.id}}" data-type='1' bindtap='toArticleList'>
+    <view class='a_title sheng'>{{itemName.title}}</view>
+    <image src='{{itemName.image}}'></image>
+    <view class='a_footer flex_cb'>
+      <view>{{itemName.create_time}}</view>
+      <view class='flex_i'>
+        <image src='../../images/see.png'></image>{{itemName.read}}
+        <image src='../../images/love.png'></image>{{itemName.like}}
+        <image src='../../images/ping.png'></image>{{itemName.comment}}
+        <image src='../../images/zhuan.png'></image>{{itemName.zhuan}}
+      </view>
+    </view>
+  </view>
+</view>
+

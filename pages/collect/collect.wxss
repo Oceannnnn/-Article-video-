@@ -1,0 +1,46 @@
+/* pages/collect/collect.wxss */
+.news-warp .tab {
+    display: flex;
+    font-size: 34rpx;
+    color:#bfbfbf;
+    padding: 4rpx 20rpx;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.news-warp .tab .item {
+    padding: 20rpx;
+}
+.news-warp .tab .hover {
+    color:#333;
+    border-bottom: 2px solid #333;
+}
+.content image.zanwu{
+  margin-top: 250rpx;
+  width: 160rpx;
+  height: 160rpx;
+}
+.content{
+  margin-top: 100rpx;
+}
+.content image{
+  width: 30%;
+  height: 170rpx;
+}
+.content_icon image{
+  width: 32rpx;
+  height: 32rpx;
+  margin: 0 6rpx 0 0;
+}
+.con_body{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 60%;
+  margin-left: 20rpx;
+}
+.con_item{
+  padding: 20rpx;
+}

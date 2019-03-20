@@ -1,0 +1,84 @@
+<!--pages/articleDetails/articleDetails.wxml-->
+<import src="../../wxParse/wxParse.wxml"/>
+<view class="article_warp" hidden='{{hidden}}'>
+  <view wx:if="{{isVideo}}">
+    <video src='{{src}}' objectFit="cover" controls poster='{{image}}'></video>
+    <view class='flex_cb video_header bor_b'>
+      <view>{{name}}</view>
+      <view class='c_999 f_32'>{{create_time}}</view>
+    </view>
+    <view class='flex_i video_header bor_b c_999 f_32'>
+      <view>时长 {{length}}</view>
+      <view class='ml_20 flex_i'>
+        <image src='../../images/guan.png' class='video_guan'></image>
+        {{read}}
+      </view>
+    </view>
+  </view>
+  <view wx:else>
+    <view class="title mb_20" wx:if="{{title!=''}}">{{title}}</view>
+    <view class='a_read flex_i'>
+      <view>{{create_time}}</view>
+      <view class='ml_20'>阅读 {{read}}</view>
+    </view>
+  </view>
+  <view class="content bor_b">
+    <template is="wxParse" data="{{wxParseData:details.nodes}}" />
+  </view>
+  <view wx:if="{{zanList!=''}}">
+    <view class='a_footer flex_f flex_i bor_b' bindtap='toZanList'>
+      <view wx:for="{{zanList}}" wx:key="{{itemName}}" wx:for-item="itemName" class='img_item'>
+        <image src='{{itemName.avatar}}'></image>
+      </view>
+      <view><text class='zan_num'>{{like}}</text>赞</view>
+    </view>
+  </view>
+  <view wx:else class='c_999 f_32 flex_i no_zan bor_b'>
+    <image src='../../images/love.png' class='write'></image>
+    快来点赞吧！
+  </view>
+  <view class='pin_content'>
+    <view class='pin_title bor_b f_32'>评论（{{comment}}）</view>
+    <view wx:if="{{pinList!=''}}">
+      <view wx:for="{{pinList}}" wx:key="{{itemName}}" wx:for-item="itemName" class='pin_item flex_cb bor_b'>
+        <view class='flex_i'>
+          <image src='{{itemName.avatar}}' class='tou'></image>
+          <view class='pin_wen f_32 flex_cb'>
+            <view class='pin_left'>
+              <view class='name mb_10'>{{itemName.username}}</view>
+              <view class='mb_10'>{{itemName.content}}</view>
+            </view>
+            <view class='time'>
+              <view>{{itemName.comment_time_hour}}</view>
+              {{itemName.comment_time_minute}}
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class='pin_more flex_fa f_32' wx:if="{{pinList.length >= 5}}" bindtap='comment'>查看更多评论>></view>
+    </view>
+    <view wx:else class='f_32 c_999 flex_ja p_40 mt_20'>
+      <image src='../../images/write.png' class='write'></image>
+      等你来抢沙发
+    </view>
+  </view>
+  <view class='artice_footer flex_i bor_t bg_f'>
+    <view class='flex_fa item' bindtap='comment'>
+      <image src='../../images/comment.png'></image>
+      评论{{comment}}
+    </view>
+    <view class='flex_fa item' bindtap='zan' data-id="{{id}}" data-like="{{like}}">
+      <image src="../../images/zan{{is_liked == true?'_active':''}}.png"></image>
+      点赞{{like}}
+    </view>
+    <view class='flex_fa item' bindtap='collect' data-id="{{id}}">
+      <image src="../../images/collect{{is_collectd == true?'_active':''}}.png"></image>
+      收藏
+    </view>
+    <view class='flex_fa item'>
+      <image src='../../images/forward.png'></image>
+      分享{{zhuan}}
+      <button data-id="{{id}}" data-zhuan='{{zhuan}}' data-title="{{type == 1?title:name}}" open-type="{{state?'share':''}}" bindtap='onItemShareTap'></button>
+    </view>
+  </view>
+</view>

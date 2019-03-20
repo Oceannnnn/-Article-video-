@@ -1,0 +1,42 @@
+<!--pages/search/search.wxml-->
+<view class='page'>
+  <view class='i_header bor_b bor_t flex_cb f_32'>
+    <view class='i_search flex_i'>
+      <image src='../../images/search.png'></image>
+      <input placeholder='请输入要搜索的内容' value='{{searchValue}}' type='text' bindinput='searchValue'></input>
+    </view>
+    <view class='s_search' bindtap='s_search'>搜索</view>
+  </view>
+  <view class='i_body'>
+    <view wx:if="{{recommendList==''}}">
+      <view class='mb_20 flex' wx:if="{{histroyList!=''}}">
+        <view class='histroyBody'>
+          历史搜索
+          <view class='flex_f'>
+            <view wx:for="{{histroyList}}" wx:key="{{itemName}}" wx:for-item="itemName" bindtap='searchHistroy' data-word="{{itemName.search_word}}" class='s_item'>
+              {{itemName.search_word}}
+            </view>
+          </view>
+        </view>
+        <image src='../../images/delete.png' class='histroyImage' bindtap='deleteHistroy'></image>
+      </view>
+      <view>
+        热门搜索
+        <view class='flex_f'>
+          <view wx:for="{{searchList}}" wx:key="{{itemName}}" wx:for-item="itemName" bindtap='searchList' data-id="{{itemName.id}}" data-type="2" class='s_item'>
+            {{itemName.subtitle}}
+          </view>
+        </view>
+      </view>
+    </view>
+    <view wx:else>
+      <view class='item mb_20' wx:for="{{recommendList}}" wx:key="{{itemName}}" wx:for-item="itemName" data-id="{{itemName.id}}" bindtap="videoPlay">
+        <image class="model-img" mode="aspectFill" src="{{itemName.image}}"></image>
+        <view class='re_tile flex_fa'>
+          <view class='sheng movie_name'>{{itemName.name}}</view>
+          <view class='f_32 mt_20'>时长：{{itemName.length}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

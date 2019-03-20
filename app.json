@@ -1,0 +1,53 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/collect/collect",
+    "pages/about/about",
+    "pages/details/details",
+    "pages/zan/zan",
+    "pages/comment/comment",
+    "pages/article/article",
+    "pages/search/search",
+    "pages/videoList/videoList",
+    "pages/video/video",
+    "pages/my/my"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "玩出来的科学家",
+    "navigationBarTextStyle":"black",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#000",
+    "backgroundColor": "#fff",
+    "selectedColor": "#000",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "推荐",
+        "iconPath": "images/tui.png",
+        "selectedIconPath": "images/tui_active.png"
+      },
+      {
+        "pagePath": "pages/video/video",
+        "text": "视频分类",
+        "iconPath": "images/video.png",
+        "selectedIconPath": "images/video_active.png"
+      },
+      {
+        "pagePath": "pages/article/article",
+        "text": "文章",
+        "iconPath": "images/article.png",
+        "selectedIconPath": "images/article_active.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "个人中心",
+        "iconPath": "images/my.png",
+        "selectedIconPath": "images/my_acitve.png"
+      }
+    ]
+  }
+}

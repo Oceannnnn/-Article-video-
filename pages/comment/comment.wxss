@@ -1,0 +1,36 @@
+/* pages/comment/comment.wxss */
+@import "../details/details.wxss";
+.pin_content{
+  padding: 20rpx;
+  margin: 0 0 120rpx;
+}
+.write_con{
+  margin-top: 300rpx;
+}
+.comment_footer{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  padding: 20rpx 0;
+}
+.i_comment{
+  width: 80%;
+  margin-left: 20rpx;
+}
+.comment_footer input{
+  width:100%;
+  border: 1px solid #eee;
+  padding: 10rpx;
+}
+.s_comment{
+  width: 20%;
+  text-align: center;
+  padding: 0;
+  margin: 0 30rpx;
+  border-radius: 20rpx; 
+  opacity: 1;
+  position: relative;
+  font-size: 34rpx;
+}

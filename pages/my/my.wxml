@@ -1,0 +1,27 @@
+<!--pages/my/my.wxml-->
+<view class="my-wrap f_32">
+    <view class="top-info p_40 bg_f8e bor_b">
+        <view wx:if="{{!s_hasUserInfo}}" class='flex_fa mb_20'>
+            <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" class='f_32'>请登录</button>
+        </view>
+        <view wx:else class="flex_fa mb_20">
+          <!-- <open-data class="avatar mb_20" type="userAvatarUrl"></open-data>
+          <open-data class="mt_20" type="userNickName"></open-data>
+           -->
+          <image class="avatar mb_20" src="{{s_userInfo.avatarUrl}}"></image>
+          <view class="mt_20">{{s_userInfo.nickName}}</view>
+        </view>
+    </view>
+    <view class="nav-warp">
+        <view class="nav-item bor_b" bindtap='collect'>
+            <view>我的收藏</view>
+            <image class="arrow" src="../../images/last_Dawn.png"></image>
+        </view>
+        <navigator class="nav-item bor_b" url="../../pages/about/about">
+            <view>联系我们</view>
+            <image class="arrow" src="../../images/last_Dawn.png"></image>
+        </navigator>
+    </view>
+    <navigator class='flex_fa f_28 p_40' target="miniProgram" open-type="navigate" appId="wx1773ca9a5221af5b">技术支持 @ 风擎网络科技</navigator>
+</view>
+

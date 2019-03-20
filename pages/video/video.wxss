@@ -1,0 +1,43 @@
+/* pages/video/video.wxss */
+.nav-scroll{
+  width: 100%;
+  padding: 30rpx 30rpx 0;
+  color: #BDBABB;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+.scroll-view_H{
+  white-space:nowrap;
+  width: 100%;
+  box-sizing: border-box;
+}
+.nav-name{
+  display:inline-block;
+  border-bottom: 2px solid transparent;
+  padding:0 0 30rpx 0;
+  margin-right: 40rpx;
+}
+.nav-hover{
+  color: #3E3738;
+  border-bottom: 2px solid #3E3738;
+}
+.items{
+  width: 49%;
+  padding: 20rpx 0;
+  box-shadow: 1px 1px 6px #ddd;
+  font-size: 34rpx;
+}
+.items image{
+  width: 80%;
+  height: 300rpx;
+  margin-bottom: 20rpx;
+}
+.body_scroll{
+  padding: 20rpx;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 100rpx;
+}

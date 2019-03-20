@@ -1,0 +1,24 @@
+/* pages/article/article.wxss */
+page{
+  background: #F3F6F6
+}
+.articleItem{
+  font-size: 38rpx;
+}
+.a_title{
+  padding: 20rpx;
+}
+.articleItem image{
+  width: 100%;
+  height: 400rpx;
+}
+.a_footer{
+  padding: 20rpx;
+  font-size: 30rpx;
+  color: #999;
+}
+.a_footer image{
+  width: 32rpx;
+  height: 32rpx;
+  margin: 0 10rpx;
+}

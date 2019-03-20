@@ -1,0 +1,30 @@
+<!--pages/comment/comment.wxml-->
+<view class='pin_content'>
+  <view wx:if="{{commentList!=''}}">
+    <view wx:for="{{commentList}}" wx:key="{{itemName}}" wx:for-item="itemName" class='pin_item flex_cb bor_b'>
+      <view class='flex_i'>
+        <image src='{{itemName.avatar}}' class='tou'></image>
+        <view class='pin_wen f_32 flex_cb'>
+          <view class='pin_left'>
+            <view class='name mb_10'>{{itemName.username}}</view>
+            <view class='mb_10'>{{itemName.content}}</view>
+          </view>
+          <view class='time'>
+            <view>{{itemName.comment_time_hour}}</view>
+            {{itemName.comment_time_minute}}
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view wx:else class='f_32 c_999 flex_ja write_con'>
+    <image src='../../images/write.png' class='write'></image>
+    等你来抢沙发
+  </view>
+</view>
+<view class='comment_footer flex_cb f_32 bor_t bg_f'>
+  <view class='i_comment flex_i'>
+    <input placeholder='写下你的评论...' value='{{commentValue}}' type='text' bindinput='commentValue'></input>
+  </view>
+  <button class='s_comment bg_f8e' bindtap='s_comment' disabled="{{disabled}}">评论</button>
+</view>

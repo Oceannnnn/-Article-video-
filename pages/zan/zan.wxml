@@ -1,0 +1,13 @@
+<!--pages/zan/zan.wxml-->
+<view class='bor_t'>
+  <view wx:for="{{zanList}}" wx:key="{{itemName}}" wx:for-item="itemName" class='item bor_b flex_i'>
+    <view class='flex_i'>
+      <image src='{{itemName.avatar}}'></image>
+      {{itemName.username}}
+    </view>
+    <view class='time c_999'>
+      <view>{{itemName.like_time_hour}}</view>
+      {{itemName.like_time_minute}}
+    </view>
+  </view>
+</view>

@@ -1,0 +1,28 @@
+<view class='page'>
+  <navigator class='i_header bor_b bor_t' url='../search/search'>
+    <view class='i_search f_32 flex_ja'>
+      <image src='../../images/search.png'></image>
+      <view>搜索</view>
+    </view>
+  </navigator>
+  <view class='i_body'>
+    <view class='item mb_20' wx:for="{{recommendList}}" wx:key="{{itemName}}" wx:for-item="itemName">
+      <image class="model-img" mode="aspectFill" src="{{itemName.image}}" data-id="{{itemName.id}}" bindtap="videoPlay" data-type='2'></image>
+      <view class="model-btn" data-id="{{itemName.id}}" bindtap="videoPlay" data-type='2'>
+        <view class="play-icon"></view>
+      </view>
+      <view class='item_footer flex_cb'>
+        <view class='item_title sheng'>{{itemName.name}}</view>
+        <view class='flex_ja f_32'>
+          <image src="../../images/zan{{itemName.is_liked==true?'_active':''}}.png" data-id="{{itemName.id}}" bindtap='zan' data-like="{{itemName.like}}"></image>{{itemName.like}}
+          <image src='../../images/comment.png' data-id="{{itemName.id}}" data-type='2' bindtap="videoPlay"></image>{{itemName.comment}}
+          <view class='flex_ja'>
+            <button data-id="{{itemName.id}}" data-zhuan='{{itemName.zhuan}}' data-title="{{itemName.name}}" open-type="{{state?'share':''}}" bindtap='onItemShareTap'></button>
+            <image src='../../images/forward.png'></image>{{itemName.zhuan}}
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <navigator class='flex_fa f_28 p_40' target="miniProgram" open-type="navigate" appId="wx1773ca9a5221af5b">技术支持 @ 风擎网络科技</navigator>
+</view>

@@ -1,0 +1,79 @@
+/**app.wxss**/
+.flex{
+  display: flex;
+}
+.flex_i{
+  display: flex;
+  align-items: center;
+}
+.flex_ja{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex_cb{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.flex_fa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.flex_f {
+  display: flex;
+  flex-wrap: wrap;
+}
+.mt_20{
+  margin-top: 20rpx;
+}
+.mb_20{
+  margin-bottom: 20rpx;
+}
+.mb_10{
+  margin-bottom: 10rpx;
+}
+.ml_20{
+  margin-left: 20rpx;
+}
+.mr_20{
+  margin-right: 20rpx;
+}
+.p_40{
+  padding: 40rpx;
+}
+.bg_f8e{
+  background: #F8E843;
+}
+.bg_f{
+  background: #fff;
+}
+.c_f8e{
+  color: #F8E843;
+}
+.f_32{
+  font-size: 32rpx;
+}
+.f_28{
+  font-size: 28rpx;
+}
+.bor_b{
+  border-bottom: 1px solid #eee;
+}
+.bor_t{
+  border-top: 1px solid #eee;
+}
+.c_999{
+  color: #999;
+}
+.zanwu{
+  margin-top: 250rpx;
+  width: 160rpx;
+  height: 160rpx;
+}
+.sheng{
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}

@@ -1,0 +1,22 @@
+<!--pages/videoList/videoList.wxml-->
+<view>
+  <view class='body-scroll'>
+    <view class='item mb_20' wx:for="{{recommendList}}" wx:key="{{itemName}}" wx:for-item="itemName">
+      <image class="model-img" mode="aspectFill" src="{{itemName.image}}" data-id="{{itemName.id}}" data-type='2' bindtap="videoPlay"></image>
+      <view class="model-btn" data-id="{{itemName.id}}" data-type='2' bindtap="videoPlay">
+        <view class="play-icon"></view>
+      </view>
+      <view class='item_footer flex_cb'>
+        <view class='item_title sheng'>{{itemName.name}}</view>
+        <view class='flex_ja f_32'>
+          <image src="../../images/zan{{itemName.is_liked == true?'_active':''}}.png" data-id="{{itemName.id}}" data-like="{{itemName.like}}"  bindtap='zan'></image>{{itemName.like}}
+          <image src='../../images/comment.png' data-id="{{itemName.id}}" data-type='2' bindtap="videoPlay"></image>{{itemName.comment}}
+          <view class='flex_ja'>
+            <button data-id="{{itemName.id}}" data-zhuan='{{itemName.zhuan}}' data-title="{{itemName.name}}" open-type="{{state?'share':''}}" bindtap='onItemShareTap'></button>
+            <image src='../../images/forward.png'></image>{{itemName.zhuan}}
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
